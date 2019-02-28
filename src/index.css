@@ -1,0 +1,59 @@
+@import "Styles/App.css";
+@import "Styles/DatePicker.css";
+@import "Styles/Map.css";
+@import "Styles/Material.css";
+@import "Styles/MaterialInput.css";
+
+@font-face {
+    font-family: "IranSans Light";
+    src: url("Media/Fonts/IRANSans_Light.woff") format("woff");
+}
+
+body {
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    font-family: "IranSans Light", serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    background-color: #F1F2F7;
+}
+
+* {
+    vertical-align: top;
+}
+
+button, input, textarea {
+    font-family: "IranSans Light", serif;
+    padding: 0;
+    margin: 0;
+}
+
+button, button:focus {
+    border: none;
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #cdcdcd;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2A3542;
+}

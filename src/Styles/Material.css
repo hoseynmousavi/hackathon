@@ -1,0 +1,60 @@
+
+.material {
+    overflow: hidden;
+    transform: perspective(0);
+    position: relative;
+    user-select: none;
+    direction: ltr;
+    vertical-align: top;
+}
+
+.material:focus {
+    outline: none;
+}
+
+.material-content {
+    direction: rtl;
+    padding: 0;
+    margin: 0;
+}
+
+.ripple {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 100%;
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.rippleSlow {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    transform: scale(2);
+    pointer-events: none;
+    animation: rippleSlow 1.5s ease;
+    transition-duration: 0.5s;
+}
+
+
+@keyframes rippleSlow {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(2);
+    }
+}
