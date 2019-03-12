@@ -1,33 +1,127 @@
-.App {
-  text-align: center;
+.main {
+    width: 80%;
+    margin: auto;
+    padding-top: 130px;
+    padding-bottom: 20px;
+    text-align: center;
+    min-height: calc(100vh - 150px);
+    transition: all linear 0.3s;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.modal-loading {
+    transition-delay: 0.15s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    transition: all linear 0.3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.modal-hide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -2;
+    opacity: 0;
+    transition: all linear 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-form-title {
+    text-align: center;
+    width: 430px;
+    border-bottom: 2px solid #393b45;
+    color: #393b45;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 13px 0;
+}
+
+.login-input {
+    width: 430px;
+    height: 55px;
+    margin: 8px;
+}
+
+.login-form-submit {
+    background-color: #393b45;
+    color: #F1F2F7;
+    width: 433px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 16px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.waiting-loading {
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .main {
+        width: 97%;
+    }
+}
+
+
+.fade-appear {
+    opacity: 0;
+    transition: all 300ms linear;
+}
+
+.fade-appear.fade-appear-active {
+    opacity: 1;
+    transition: all 300ms linear;
+}
+
+.fade-enter {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 300ms linear;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 300ms linear;
+}
+
+.fade-exit {
+    opacity: 1;
+    transition: all 300ms linear;
+    transform: scale(1);
+    transform-origin: top left;
+}
+
+.fade-exit.fade-exit-active {
+    transition: all 300ms linear;
+    opacity: 0;
+    position: fixed;
+    transform: scale(0);
+    transform-origin: top left;
 }

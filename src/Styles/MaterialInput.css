@@ -37,13 +37,13 @@
 
 .material-input-text:focus, .material-input-textarea:focus {
     outline: none;
-    border: 1px solid #03A9F4;
+    border: 1px solid #2A3542;
     transition-timing-function: ease;
     transition-duration: 0.2s;
 }
 
 .material-input-text:focus + .material-input-label-out, .material-input-textarea:focus + .material-input-label-out {
-    color: #03A9F4;;
+    color: #2A3542;;
     transition-timing-function: ease;
     transition-duration: 0.2s;
 }

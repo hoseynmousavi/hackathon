@@ -1,8 +1,14 @@
 @import "Styles/App.css";
+@import "Styles/Sidebar.css";
+@import "Styles/Doctor.css";
+@import "Styles/Reception.css";
+@import "Styles/Checkbox.css";
+@import "Styles/Header.css";
 @import "Styles/DatePicker.css";
 @import "Styles/Map.css";
 @import "Styles/Material.css";
 @import "Styles/MaterialInput.css";
+@import '~react-notifications/lib/notifications.css';
 
 @font-face {
     font-family: "IranSans Light";
@@ -17,7 +23,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
-    background-color: #F1F2F7;
+    background-color: #f9faff;
 }
 
 * {

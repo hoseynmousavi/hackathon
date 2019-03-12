@@ -1,0 +1,345 @@
+.header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 1px solid #6E7889;
+}
+
+.nav {
+    background-color: #6e7889;
+    color: white;
+    font-size: 13px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-line {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    height: 40px;
+    transition: all ease 0.3s;
+}
+
+.nav-line-hide {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    height: 0;
+    overflow: hidden;
+    transition: all ease 0.3s;
+}
+
+.phone {
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.location {
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.health {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.touch {
+    margin-top: 5px;
+    width: 120px;
+}
+
+.phone-icon {
+    height: 20px;
+    padding-left: 10px;
+}
+
+.header-main {
+    color: #393b45;
+    /*background-color: #F1F2F7;*/
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs5MrPdVao3_5mDpfPED-TjK2MncdgcUDsOLXV7uGg14lbkj4J');
+    background-size: cover;
+}
+
+.header-content {
+    height: 90px;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    transition: all 0.3s ease;
+}
+
+.header-title {
+    position: relative;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    height: calc(100% - 33px);
+    overflow: hidden;
+    width: 230px;
+    padding: 23px 10px 10px 10px;
+    transition: all ease 0.3s;
+    box-shadow: 0 0 8px inset rgba(0,0,0,0.3);
+}
+
+
+.header-title-welcome {
+    position: relative;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    height: calc(100% - 33px);
+    overflow: hidden;
+    width: 230px;
+    padding: 23px 10px 10px 10px;
+    box-shadow: 0 0 8px inset rgba(0,0,0,0.3);
+    transition: all ease 0.3s;
+}
+
+.header-title-open {
+    position: relative;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    height: 230px;
+    overflow: hidden;
+    border-radius: 3px;
+    width: 230px;
+    padding: 23px 10px 10px 10px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all ease 0.3s;
+}
+
+.logo-cont {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.logo {
+    margin-top: 13px;
+    height: 60px;
+    border: 2px solid #393b45;
+    border-radius: 50%;
+    background-color: #cce3ff;
+}
+
+.hamyar {
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 45px;
+}
+
+.header-image {
+    margin-top: -3px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #393b45;
+    transition: all ease 0.3s;
+}
+
+.side-image {
+    margin-top: -3px;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #393b45;
+    transition: all ease 0.3s;
+}
+
+.header-image-hide {
+    margin-top: 2px;
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #393b45;
+    transition: all ease 0.3s;
+}
+
+.header-image-title {
+    display: inline-block;
+    margin-top: 8px;
+    margin-right: 10px;
+    color: #393b45;
+}
+
+.sidebar-image-title {
+    display: inline-block;
+    margin-top: 17px;
+    margin-right: 15px;
+    color: #393b45;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.profile-card {
+    margin-top: 5px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.sidebar-profile-card {
+    margin-top: 5px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.profile-card-hide {
+    margin-top: 5px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    opacity: 0;
+}
+
+.profile-card-date {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    font-size: 12px;
+    color: #cdcdd2;
+}
+
+.side-card-date {
+    position: absolute;
+    bottom: 12px;
+    right: 10px;
+    font-size: 16px;
+    color: #cdcdd2;
+}
+
+.log-out-cont {
+    position: absolute;
+    bottom: 7px;
+    left: 10px;
+    font-size: 13px;
+    color: red;
+    font-weight: bold;
+}
+
+.side-log-out-cont {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+}
+
+.log-out {
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.profile-card-title {
+    text-align: justify;
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+    color: #6E7889
+}
+
+.sidebar-card-title {
+    text-align: justify;
+    display: inline-block;
+    width: 110px;
+    font-weight: bold;
+    color: #6E7889
+}
+
+.home-cont {
+    text-align: center;
+    padding: 0 25px;
+    height: 100%;
+}
+
+.home {
+    margin-top: 15px;
+    width: 40px;
+    height: 40px;
+}
+
+.home-cont-title {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .header-title {
+        display: none;
+    }
+
+    .header-title-open {
+        display: none;
+    }
+
+    .nav-line {
+        width: 97%;
+        font-size: 10px;
+    }
+
+    .nav-line-hide {
+        width: 97%;
+        font-size: 10px;
+    }
+
+    .header-content {
+        width: 97%;
+    }
+
+    .header-title-welcome {
+        width: 160px;
+        padding: 23px 10px 10px 10px;
+        background-color: transparent;
+        text-align: right;
+        box-shadow: none;
+    }
+
+    .phone {
+        padding: 12px 0;
+    }
+
+    .location {
+        padding: 12px 0;
+    }
+
+    .header-image-title {
+        margin-top: 12px;
+        font-size: 13px;
+        margin-right: 0;
+    }
+
+    .phone-icon {
+        margin-top: -2px;
+        height: 18px;
+        padding-left: 10px;
+    }
+
+    .hamburger {
+        padding: 15px 25px 0 25px;
+        display: block;
+        height: calc(100% - 15px);
+    }
+
+    .hamburger-logo{
+        width: 40px;
+        height: 40px;
+    }
+
+    .touch {
+        margin-top: 7px;
+        width: 110px;
+    }
+}
