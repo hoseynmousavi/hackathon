@@ -7,6 +7,7 @@ import Header from './Components/Header'
 import Doctor from './Components/Doctor'
 import Nurse from './Components/Nurse'
 import Sidebar from './Components/Sidebar'
+import Fluent from './Components/Fluent'
 
 class App extends Component
 {
@@ -144,7 +145,12 @@ class App extends Component
 
                 <Switch>
                     <Route exact path='/Login' render={() =>
-                        <div>
+                        <div /*style={{textAlign: 'center', margin: '20px auto'}}*/>
+                            {/*<Fluent backgroundColor='#ffffff' className={'shit'}>*/}
+                                {/*<div style={{padding: '15px', display: 'inline-block'}}>*/}
+                                    {/*Hello*/}
+                                {/*</div>*/}
+                            {/*</Fluent>*/}
                             <Header user={null}/>
                             <Login handleLoading={this.handleLoading} setUser={this.setUser} />
                         </div>

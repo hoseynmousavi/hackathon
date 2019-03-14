@@ -44,7 +44,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin-top: 130px;
+    height: calc(80vh - 130px);
+    transition: all 0.3s ease;
 }
 
 .login-form-title {
@@ -64,11 +66,23 @@
     margin: 8px;
 }
 
+.login-fluent {
+    margin-top: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.shit{
+    display: inline-block;
+    margin: auto;
+    text-align: center  ;
+}
+
 .login-form-submit {
+    overflow: hidden;
     background-color: #393b45;
     color: #F1F2F7;
     width: 433px;
-    margin-top: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -82,12 +96,20 @@
     padding-top: 10px;
 }
 
+.my-fluent {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.my-material {
+    padding: 30px;
+}
+
 @media screen and (max-width: 900px) {
     .main {
         width: 97%;
     }
 }
-
 
 .fade-appear {
     opacity: 0;

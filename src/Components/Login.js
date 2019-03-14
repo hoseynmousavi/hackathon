@@ -3,6 +3,7 @@ import MaterialInput from './MaterialInput'
 import Material from './Material'
 import {Redirect} from 'react-router-dom'
 import {NotificationManager} from 'react-notifications'
+import Fluent from './Fluent'
 
 class Login extends Component
 {
@@ -168,7 +169,9 @@ class Login extends Component
                 <div className='login-form-title'>ورود</div>
                 <MaterialInput getValue={this.handlePhone} onKeyDown={this.handleEnter} maxLength={11} type='text' label='شماره تلفن' className='login-input' backgroundColor='#f9faff'/>
                 <MaterialInput getValue={this.handlePassword} onKeyDown={this.handleEnter} type='password' label='رمز عبور' className='login-input' backgroundColor='#f9faff'/>
-                <Material backgroundColor='rgba(241,242,247,0.6)' className='login-form-submit' onClick={this.login}>ورود</Material>
+                <Fluent backgroundColor='#F9FAFF' className='login-fluent'>
+                    <Material backgroundColor='rgba(241,242,247,0.6)' className='login-form-submit' onClick={this.login}>ورود</Material>
+                </Fluent>
             </div>
         )
     }

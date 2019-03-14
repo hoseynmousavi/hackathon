@@ -29,8 +29,8 @@ class Material extends React.Component
             if (this.props.backgroundColor) ripple.style.backgroundColor = this.props.backgroundColor
             ripple.style.height = ripple.style.width = Math.max(rect.width, rect.height) + 'px'
             target.appendChild(ripple)
-            let top = e.pageY - rect.top - ripple.offsetHeight / 2 - window.scrollY
-            let left = e.pageX - rect.left - ripple.offsetWidth / 2 - window.scrollX
+            let top = e.clientY - rect.top - ripple.offsetHeight / 2
+            let left = e.clientX - rect.left - ripple.offsetWidth / 2
             ripple.style.top = top + 'px'
             ripple.style.left = left + 'px'
             setTimeout(() =>
@@ -68,8 +68,8 @@ class Material extends React.Component
 
     onMouseDown(e)
     {
-        let pageY = e.pageY
-        let pageX = e.pageX
+        let clientY = e.clientY
+        let clientX = e.clientX
         this.buttonPressTimer = setTimeout(() =>
         {
             let target = this.container
@@ -80,8 +80,8 @@ class Material extends React.Component
             ripple.style.height = ripple.style.width = parseInt(1.3 * Math.max(rect.width, rect.height), 10) + 'px'
             target.appendChild(ripple)
             this.ripple = ripple
-            let top = pageY - rect.top - ripple.offsetHeight / 2 - window.scrollY
-            let left = pageX - rect.left - ripple.offsetWidth / 2 - window.scrollX
+            let top = clientY - rect.top - ripple.offsetHeight / 2
+            let left = clientX - rect.left - ripple.offsetWidth / 2
             ripple.style.top = top + 'px'
             ripple.style.left = left + 'px'
         }, 300)
