@@ -72,10 +72,10 @@
     overflow: hidden;
 }
 
-.shit{
+.shit {
     display: inline-block;
-    margin: auto;
-    text-align: center  ;
+    margin: 0 3px;
+    text-align: center;
 }
 
 .login-form-submit {

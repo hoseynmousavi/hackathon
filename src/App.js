@@ -145,12 +145,34 @@ class App extends Component
 
                 <Switch>
                     <Route exact path='/Login' render={() =>
-                        <div /*style={{textAlign: 'center', margin: '20px auto'}}*/>
+                        <div /*style={{textAlign: 'center', margin: '20px auto'}}*/ >
+
                             {/*<Fluent backgroundColor='#ffffff' className={'shit'}>*/}
-                                {/*<div style={{padding: '15px', display: 'inline-block'}}>*/}
+                                {/*<div style={{margin: '0 5px', padding: '10px 15px', display: 'inline-block'}}>*/}
                                     {/*Hello*/}
                                 {/*</div>*/}
                             {/*</Fluent>*/}
+                            {/*<Fluent backgroundColor='#ffffff' className={'shit'}>*/}
+                                {/*<div style={{margin: '0 5px', padding: '10px 15px', display: 'inline-block'}}>*/}
+                                    {/*Hello*/}
+                                {/*</div>*/}
+                            {/*</Fluent>*/}
+                            {/*<Fluent backgroundColor='#ffffff' className='shit'>*/}
+                                {/*<div style={{padding: '10px 15px', display: 'inline-block'}}>*/}
+                                    {/*Hello*/}
+                                {/*</div>*/}
+                            {/*</Fluent>*/}
+                            {/*<Fluent backgroundColor='#ffffff' className={'shit'}>*/}
+                                {/*<div style={{margin: '0 5px', padding: '10px 15px', display: 'inline-block'}}>*/}
+                                    {/*Hello*/}
+                                {/*</div>*/}
+                            {/*</Fluent>*/}
+                            {/*<Fluent backgroundColor='#ffffff' className={'shit'}>*/}
+                                {/*<div style={{margin: '0 5px', padding: '10px 15px', display: 'inline-block'}}>*/}
+                                    {/*Hello*/}
+                                {/*</div>*/}
+                            {/*</Fluent>*/}
+
                             <Header user={null}/>
                             <Login handleLoading={this.handleLoading} setUser={this.setUser} />
                         </div>
