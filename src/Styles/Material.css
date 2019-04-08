@@ -45,8 +45,8 @@
     border-radius: 100%;
     transform: scale(2);
     pointer-events: none;
-    animation: rippleSlow 1.5s ease;
-    transition-duration: 0.5s;
+    animation: rippleSlow 1s ease;
+    transition: all linear 0.4s;
 }
 
 
@@ -55,6 +55,6 @@
         transform: scale(0);
     }
     to {
-        transform: scale(2);
+        transform: scale(1.7);
     }
 }

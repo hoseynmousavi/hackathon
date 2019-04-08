@@ -75,6 +75,7 @@ class Material extends React.Component
             let target = this.container
             let rect = target.getBoundingClientRect()
             let ripple = document.createElement('span')
+            ripple.className = 'ripple'
             ripple.className = 'rippleSlow'
             if (this.props.backgroundColor) ripple.style.backgroundColor = this.props.backgroundColor
             ripple.style.height = ripple.style.width = parseInt(1.3 * Math.max(rect.width, rect.height), 10) + 'px'
@@ -92,6 +93,7 @@ class Material extends React.Component
         clearTimeout(this.buttonPressTimer)
         if (this.ripple)
         {
+            this.ripple.style.transform = 'scale(0)'
             this.ripple.style.opacity = '0'
             setTimeout(() =>
             {

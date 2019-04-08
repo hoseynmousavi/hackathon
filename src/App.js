@@ -8,6 +8,7 @@ import Doctor from './Components/Doctor'
 import Nurse from './Components/Nurse'
 import Sidebar from './Components/Sidebar'
 import Fluent from './Components/Fluent'
+import Material from './Components/Material'
 
 class App extends Component
 {
@@ -145,33 +146,39 @@ class App extends Component
 
                 <Switch>
                     <Route exact path='/Login' render={() =>
-                        <div /*style={{textAlign: 'center', margin: '20px auto'}}*/ >
+                        <div /*style={{textAlign: 'center', margin: '20px auto'}}*/>
 
                             {/*<Fluent backgroundColor='#ffffff' className={'shit'}>*/}
+                                {/*<Material>*/}
+                                    {/*<div style={{margin: '0 5px', padding: '10px 15px', display: 'inline-block'}}>*/}
+                                        {/*Hello buddy*/}
+                                    {/*</div>*/}
+                                {/*</Material>*/}
+                            {/*</Fluent><Fluent backgroundColor='#ffffff' className={'shit'}>*/}
+                            {/*<Material>*/}
                                 {/*<div style={{margin: '0 5px', padding: '10px 15px', display: 'inline-block'}}>*/}
-                                    {/*Hello*/}
+                                    {/*Hello buddy*/}
                                 {/*</div>*/}
-                            {/*</Fluent>*/}
-                            {/*<Fluent backgroundColor='#ffffff' className={'shit'}>*/}
+                            {/*</Material>*/}
+                        {/*</Fluent><Fluent backgroundColor='#ffffff' className={'shit'}>*/}
+                            {/*<Material>*/}
                                 {/*<div style={{margin: '0 5px', padding: '10px 15px', display: 'inline-block'}}>*/}
-                                    {/*Hello*/}
+                                    {/*Hello buddy*/}
                                 {/*</div>*/}
-                            {/*</Fluent>*/}
-                            {/*<Fluent backgroundColor='#ffffff' className='shit'>*/}
-                                {/*<div style={{padding: '10px 15px', display: 'inline-block'}}>*/}
-                                    {/*Hello*/}
-                                {/*</div>*/}
-                            {/*</Fluent>*/}
-                            {/*<Fluent backgroundColor='#ffffff' className={'shit'}>*/}
+                            {/*</Material>*/}
+                        {/*</Fluent><Fluent backgroundColor='#ffffff' className={'shit'}>*/}
+                            {/*<Material>*/}
                                 {/*<div style={{margin: '0 5px', padding: '10px 15px', display: 'inline-block'}}>*/}
-                                    {/*Hello*/}
+                                    {/*Hello buddy*/}
                                 {/*</div>*/}
-                            {/*</Fluent>*/}
-                            {/*<Fluent backgroundColor='#ffffff' className={'shit'}>*/}
+                            {/*</Material>*/}
+                        {/*</Fluent><Fluent backgroundColor='#ffffff' className={'shit'}>*/}
+                            {/*<Material>*/}
                                 {/*<div style={{margin: '0 5px', padding: '10px 15px', display: 'inline-block'}}>*/}
-                                    {/*Hello*/}
+                                    {/*Hello buddy*/}
                                 {/*</div>*/}
-                            {/*</Fluent>*/}
+                            {/*</Material>*/}
+                        {/*</Fluent>*/}
 
                             <Header user={null}/>
                             <Login handleLoading={this.handleLoading} setUser={this.setUser} />
