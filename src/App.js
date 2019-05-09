@@ -89,10 +89,7 @@ class App extends Component
 
     setUser(user)
     {
-        return new Promise((resolve) =>
-        {
-            this.setState({...this.state, user, redirect: false}, () => resolve())
-        })
+        this.setState({...this.state, user, redirect: false})
     }
 
     setDisease(disease)
@@ -125,7 +122,6 @@ class App extends Component
         this.setState({...this.state, sidebar: true})
     }
 
-
     hideSidebar()
     {
         if (this.state.sidebar)
@@ -138,50 +134,14 @@ class App extends Component
             <div>
 
                 {
-                    this.state.redirect ?
-                        <Redirect to='/login'/>
-                        :
-                        null
+                    this.state.redirect && <Redirect to='/login'/>
                 }
 
                 <Switch>
                     <Route exact path='/Login' render={() =>
-                        <div /*style={{textAlign: 'center', margin: '20px auto'}}*/>
-
-                            {/*<Fluent backgroundColor='#ffffff' className={'shit'}>*/}
-                                {/*<Material>*/}
-                                    {/*<div style={{margin: '0 5px', padding: '10px 15px', display: 'inline-block'}}>*/}
-                                        {/*Hello buddy*/}
-                                    {/*</div>*/}
-                                {/*</Material>*/}
-                            {/*</Fluent><Fluent backgroundColor='#ffffff' className={'shit'}>*/}
-                            {/*<Material>*/}
-                                {/*<div style={{margin: '0 5px', padding: '10px 15px', display: 'inline-block'}}>*/}
-                                    {/*Hello buddy*/}
-                                {/*</div>*/}
-                            {/*</Material>*/}
-                        {/*</Fluent><Fluent backgroundColor='#ffffff' className={'shit'}>*/}
-                            {/*<Material>*/}
-                                {/*<div style={{margin: '0 5px', padding: '10px 15px', display: 'inline-block'}}>*/}
-                                    {/*Hello buddy*/}
-                                {/*</div>*/}
-                            {/*</Material>*/}
-                        {/*</Fluent><Fluent backgroundColor='#ffffff' className={'shit'}>*/}
-                            {/*<Material>*/}
-                                {/*<div style={{margin: '0 5px', padding: '10px 15px', display: 'inline-block'}}>*/}
-                                    {/*Hello buddy*/}
-                                {/*</div>*/}
-                            {/*</Material>*/}
-                        {/*</Fluent><Fluent backgroundColor='#ffffff' className={'shit'}>*/}
-                            {/*<Material>*/}
-                                {/*<div style={{margin: '0 5px', padding: '10px 15px', display: 'inline-block'}}>*/}
-                                    {/*Hello buddy*/}
-                                {/*</div>*/}
-                            {/*</Material>*/}
-                        {/*</Fluent>*/}
-
+                        <div>
                             <Header user={null}/>
-                            <Login handleLoading={this.handleLoading} setUser={this.setUser} />
+                            <Login handleLoading={this.handleLoading} setUser={this.setUser}/>
                         </div>
 
                     }/>
