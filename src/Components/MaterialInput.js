@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 
-
 class MaterialInput extends Component
 {
     static propTypes = {
@@ -24,6 +23,11 @@ class MaterialInput extends Component
             value: '',
             focused: false,
         }
+        this.handleChange = this.handleChange.bind(this)
+        this.handleFocus = this.handleFocus.bind(this)
+        this.handleBlur = this.handleBlur.bind(this)
+        this.handleKeyDown = this.handleKeyDown.bind(this)
+        this.handleClick = this.handleClick.bind(this)
     }
 
     componentWillReceiveProps(nextProps, nextContext)
@@ -40,7 +44,7 @@ class MaterialInput extends Component
         }
     }
 
-    handleChange = (e) =>
+    handleChange(e)
     {
         const value = e.target.value
         this.setState({...this.state, value}, () =>
@@ -49,61 +53,66 @@ class MaterialInput extends Component
         })
     }
 
-    handleFocus = () =>
+    handleFocus()
     {
         this.setState({...this.state, focused: true})
     }
 
-    handleBlur = () =>
+    handleBlur()
     {
         this.setState({...this.state, focused: false})
     }
 
-    handleKeyDown = (e) =>
+    handleKeyDown(e)
     {
-        if (this.props.onKeyDown)
-            this.props.onKeyDown(e)
+        this.props.onKeyDown && this.props.onKeyDown(e)
     }
 
-    handleClick = () =>
+    handleClick()
     {
         this.textRef.focus()
     }
 
+
     render()
     {
+        const {className, isTextArea, maxLength, borderColor, type, label, backgroundColor} = this.props
+        const {focused, value} = this.state
+
         return (
-            <div className={this.props.className ? this.props.className + ' material-input' : 'material-input'}>
+            <div className={className ? className + ' material-input' : 'material-input'}>
                 {
-                    this.props.isTextArea ?
-                        <textarea maxLength={this.props.maxLength}
+                    isTextArea ?
+                        <textarea maxLength={maxLength}
                                   ref={e => this.textRef = e}
                                   className='material-input-textarea'
-                                  value={this.props.defaultValue}
+                                  value={value}
                                   onChange={this.handleChange}
                                   onFocus={this.handleFocus}
                                   onKeyDown={this.handleKeyDown}
                                   onBlur={this.handleBlur}
-                                  style={this.props.borderColor ? {borderColor: this.props.borderColor} : {}}
+                                  style={borderColor ? {borderColor} : {}}
                         />
                         :
-                        <input type={this.props.type ? this.props.type : 'text'}
-                               maxLength={this.props.maxLength}
+                        <input type={type ? type : 'text'}
+                               maxLength={maxLength}
                                autoComplete="new-password"
                                ref={e => this.textRef = e}
                                className='material-input-text'
-                               value={this.props.defaultValue}
+                               value={value}
                                onChange={this.handleChange}
                                onFocus={this.handleFocus}
                                onKeyDown={this.handleKeyDown}
                                onBlur={this.handleBlur}
-                               style={this.props.borderColor ? {borderColor: this.props.borderColor} : {}}
+                               style={borderColor ? {borderColor} : {}}
                         />
                 }
 
-                <label className={this.state.focused || this.state.value.trim().length > 0 ? 'material-input-label-out' : this.props.isTextArea ? 'material-area-label' : 'material-input-label'}
-                       style={{backgroundColor: this.props.backgroundColor ? this.props.backgroundColor : 'white'}}
-                       onClick={this.handleClick}>{this.props.label}</label>
+                <label className={focused || value.trim().length > 0 ? 'material-input-label-out' : 'material-input-label'}
+                       style={{backgroundColor: backgroundColor ? backgroundColor : 'white'}}
+                       onClick={this.handleClick}>
+                    {label}
+                </label>
             </div>
         )
     }

@@ -4,18 +4,11 @@
     transform: perspective(0);
     position: relative;
     user-select: none;
-    direction: ltr;
     vertical-align: top;
 }
 
 .material:focus {
     outline: none;
-}
-
-.material-content {
-    direction: rtl;
-    padding: 0;
-    margin: 0;
 }
 
 .ripple {

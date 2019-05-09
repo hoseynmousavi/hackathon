@@ -3,6 +3,10 @@
 
 # production
 /build
+*.zip
+
+# host
+/host
 
 # misc
 /.idea

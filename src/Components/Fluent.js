@@ -119,13 +119,13 @@ class Fluent extends Component
 
         return (
             <div className={className ? className + ' fluent-container' : 'fluent-container'}
-                 style={{padding: borderWidth ? borderWidth : '2px'}}
+                 style={{padding: borderWidth ? borderWidth : '2px', background: backgroundColor ? backgroundColor : 'white'}}
                  onClick={onClick}
             >
-                <div className={sign === 1 ? 'fluent-design fluent-design-show' : 'fluent-design'} style={{background: `linear-gradient(to top right, transparent, transparent, ${fluentColor ? fluentColor : '#424242'})`, opacity: sign === 1 || sign === 5 ? opacity : 0}}/>
-                <div className={sign === 2 ? 'fluent-design fluent-design-show' : 'fluent-design'} style={{background: `linear-gradient(to top left, transparent, transparent, ${fluentColor ? fluentColor : '#424242'})`, opacity: sign === 2 || sign === 5 ? opacity : 0}}/>
-                <div className={sign === 3 ? 'fluent-design fluent-design-show' : 'fluent-design'} style={{background: `linear-gradient(to bottom right, transparent, transparent, ${fluentColor ? fluentColor : '#424242'})`, opacity: sign === 3 || sign === 5 ? opacity : 0}}/>
-                <div className={sign === 4 ? 'fluent-design fluent-design-show' : 'fluent-design'} style={{background: `linear-gradient(to bottom left, transparent, transparent, ${fluentColor ? fluentColor : '#424242'})`, opacity: sign === 4 || sign === 5 ? opacity : 0}}/>
+                <div className='fluent-design' style={{background: `linear-gradient(to top right, transparent, transparent, ${fluentColor ? fluentColor : '#424242'})`, opacity: sign === 1 || sign === 5 ? opacity : 0}}/>
+                <div className='fluent-design' style={{background: `linear-gradient(to top left, transparent, transparent, ${fluentColor ? fluentColor : '#424242'})`, opacity: sign === 2 || sign === 5 ? opacity : 0}}/>
+                <div className='fluent-design' style={{background: `linear-gradient(to bottom right, transparent, transparent, ${fluentColor ? fluentColor : '#424242'})`, opacity: sign === 3 || sign === 5 ? opacity : 0}}/>
+                <div className='fluent-design' style={{background: `linear-gradient(to bottom left, transparent, transparent, ${fluentColor ? fluentColor : '#424242'})`, opacity: sign === 4 || sign === 5 ? opacity : 0}}/>
 
                 <div ref={e => this.fluent = e} className='fluent-content' style={backgroundColor ? {backgroundColor} : {}}>
                     {children}

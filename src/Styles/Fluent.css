@@ -21,9 +21,4 @@
     bottom: 0;
     transition: all 0.3s linear;
     z-index: -1;
-    opacity: 0;
-}
-
-.fluent-design-show {
-    opacity: 1;
 }
