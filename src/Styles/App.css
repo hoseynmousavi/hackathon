@@ -66,12 +66,6 @@
     margin: 8px;
 }
 
-.login-fluent {
-    margin-top: 15px;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
 .shit {
     display: inline-block;
     margin: 0 3px;
@@ -90,6 +84,7 @@
     text-align: center;
     font-size: 18px;
     font-weight: bold;
+    margin-top: 15px;
 }
 
 .waiting-loading {

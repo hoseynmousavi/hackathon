@@ -78,7 +78,7 @@ class Material extends React.Component
             ripple.className = 'ripple'
             ripple.className = 'rippleSlow'
             if (this.props.backgroundColor) ripple.style.backgroundColor = this.props.backgroundColor
-            ripple.style.height = ripple.style.width = parseInt(1.3 * Math.max(rect.width, rect.height), 10) + 'px'
+            ripple.style.height = ripple.style.width = (1.3 * Math.max(rect.width, rect.height)) + 'px'
             target.appendChild(ripple)
             this.ripple = ripple
             let top = clientY - rect.top - ripple.offsetHeight / 2
@@ -115,9 +115,10 @@ class Material extends React.Component
 
     render()
     {
+        const {children, className, onClick} = this.props
         return (
-            <div ref={e => this.container = e} className={this.props.className ? this.props.className + ' material' : 'material'} onMouseDown={this.onMouseDown} onMouseUp={this.handleButtonRelease} onMouseLeave={this.handleLeave} onClick={this.props.onClick}>
-                {this.props.children}
+            <div ref={e => this.container = e} className={className ? className + ' material' : 'material'} onMouseDown={this.onMouseDown} onMouseUp={this.handleButtonRelease} onMouseLeave={this.handleLeave} onClick={onClick}>
+                {children}
             </div>
         )
     }

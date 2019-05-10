@@ -7,8 +7,6 @@ import Header from './Components/Header'
 import Doctor from './Components/Doctor'
 import Nurse from './Components/Nurse'
 import Sidebar from './Components/Sidebar'
-import Fluent from './Components/Fluent'
-import Material from './Components/Material'
 
 class App extends Component
 {
